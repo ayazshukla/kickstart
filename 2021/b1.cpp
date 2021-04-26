@@ -5,28 +5,19 @@
 #define print(i,s) cout << "Case #" << i+1 << ": " << s << "\n";
 #define in(t) cin>>t;
 using namespace std; typedef  long  long  ll; typedef vector<int> vi; typedef set<int> si;
-void solve(string k){
-    int cnt=1;
-  for(int i=k.size()-2;i>=0;--i){
-    if(k[i+1]>k[i])
-        ++cnt;
-        else
-            break;
-  }
-  if(cnt==0)
-    cout << 1 << " ";
-  else
-    cout << cnt << " ";
-}
 int main(){
  ios::sync_with_stdio(0);cin.tie(0); int t; in(t);
  FOR(t){
-     string s; int n; in(n);in(s); string sub;
-     cout << "Case #" << i+1 << ":" << " ";
-     for(int j=1;j<=n;++j){
-        sub=s.substr(0,j);
-        solve(sub);
-     }
-     cout << endl;
- }
+	 int n; in(n); int cnt=1; string s; in(s);
+	 cout << "Case #" << i+1 << ": 1 ";
+	 for(int j=0;j<n-1;++j){
+		 if(s[j+1]>s[j]){
+			 ++cnt; cout << cnt << " ";
+		 }
+		 else {
+			 cnt=1; cout << cnt << " ";
+		 }
+	 }
+	 cout << endl;
+  }
 }
