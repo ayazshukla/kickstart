@@ -10,7 +10,7 @@ FOR(t){
 	int n; cin >> n; int arr[n][n];
 	for(int r=0;r<n;++r){
         for(int c=0;c<n;++c){
-            int val; cin >> val ; arr[r][c]=val;
+            cin >> arr[r][c];
         }
     }
     int reps=(n*2)-1; ll m=(ll)0;
